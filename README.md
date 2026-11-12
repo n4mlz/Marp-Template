@@ -2,6 +2,8 @@
 
 [サンプル](slides/example.md)をコピーして使えます。
 
+![サンプルスライドの一覧](assets/sample-preview.png)
+
 ## 準備と出力
 
 Node.js、PDF出力用の Chrome・Edge・Firefox のいずれか、[Hack Nerd Font](https://www.nerdfonts.com/font-downloads) が必要です。フォントがない場合、アイコンが文字化けします。
