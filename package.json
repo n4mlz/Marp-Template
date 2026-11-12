@@ -1,0 +1,13 @@
+{
+  "name": "n4mlz-marp-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "marp slides/example.md --html --allow-local-files --theme-set themes/n4mlz.css -o dist/example.html",
+    "pdf": "marp slides/example.md --html --allow-local-files --theme-set themes/n4mlz.css -o dist/example.pdf",
+    "preview": "marp slides/example.md --html --allow-local-files --theme-set themes/n4mlz.css --preview"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}

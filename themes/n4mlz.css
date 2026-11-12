@@ -1,0 +1,161 @@
+/* @theme n4mlz */
+@import 'default';
+
+section {
+  --ink: #494949;
+  --accent: #40958b;
+  --paper: #f5f5f5;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.45;
+  justify-content: flex-start;
+  padding: 126px 68px 48px;
+}
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  box-sizing: border-box;
+  padding: 27px 34px 12px;
+  border-bottom: 1px solid #929292;
+  color: var(--ink);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+section::after {
+  top: 27px;
+  right: 45px;
+  bottom: auto;
+  font-size: 32px;
+  font-weight: 400;
+}
+section h1, section h2, section h3 { color: var(--ink); line-height: 1.2; }
+section h1 { font-size: 40px; margin: 0 0 36px; }
+section h2 { font-size: 34px; margin: 0 0 28px; }
+section h3 { font-size: 30px; margin: 0 0 20px; }
+section p { margin: 0 0 24px; }
+section ul, section ol { margin: 0 0 24px; padding-left: 1.6em; }
+section li { padding-left: .1em; margin: .25em 0; }
+section li::marker { color: var(--accent); }
+section li li::marker { color: var(--ink); }
+section strong { color: var(--accent); font-weight: 700; }
+section a { color: #28618a; }
+section code { font-family: 'SFMono-Regular', Consolas, monospace; }
+section pre { font-size: .65em; padding: 18px 24px; border-radius: 3px; }
+section table { display: table; border-collapse: collapse; margin: 20px auto; font-size: .7em; text-align: center; }
+section th, section td { border: 2px solid var(--paper); padding: 12px 20px; }
+section th { background: var(--accent); color: white; }
+section td { background: #e3ebea; }
+section tr:nth-child(even) td { background: #cddedb; }
+section blockquote { border-left: 6px solid var(--accent); padding-left: 20px; color: var(--ink); }
+section footer { position: absolute; bottom: 16px; left: 68px; font-size: 16px; color: #777; }
+
+/* The cover uses the same header directive for event/date, positioned at top right. */
+section.title { padding: 0; }
+section.title header { height: auto; border: 0; padding: 23px 30px; text-align: right; color: #808080; font-size: 28px; font-weight: 600; }
+section.title::after { display: none; }
+section.title .cover-title { position: absolute; left: 4.3%; right: 5%; bottom: 27%; display: flex; align-items: center; gap: 14px; }
+section.title .cover-title img { width: 100px; height: 100px; object-fit: contain; }
+section.title .cover-title h1 { font-size: 48px; margin: 0; transform: translateY(15px); }
+section.title .cover-title p { font-size: 30px; margin: 0; }
+section.title .cover-author { position: absolute; top: 73.3%; left: 0; right: 0; border-top: 1px solid #999; padding: 18px 7.3%; font-size: 32px; }
+section.title .cover-author p { margin: 0 0 10px; }
+section.title .cover-author .identity { font-family: Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 0; }
+section.title .cover-author .avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+section.title .cover-author .author-row, section.title .social-row, section.title .social-link { display: flex; align-items: center; }
+section.title .author-row { gap: 18px; margin-bottom: 15px; }
+section.title .social-row { gap: 32px; }
+section.title .social-link { gap: 12px; color: inherit; text-decoration: none; line-height: 1; }
+section.title .social-link .nf { width: 44px; font-size: 44px; color: #192e4c; }
+section.title .social-link .x-icon { width: 37px; height: 37px; }
+.nf { font-family: "Hack Nerd Font", "Hack Nerd Font Mono", "Hack Nerd Font Propo"; font-weight: normal; font-style: normal; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+section.title .cover-title .nf { flex: none; width: 100px; height: 100px; font-size: 116px; color: #222; transform: translateX(-12px); }
+section.title footer { display: none; }
+
+section.section-title { justify-content: center; }
+section.section-title h1 { font-size: 58px; }
+.columns { display: flex; align-items: flex-start; gap: 48px; }
+.columns > * { flex: 1; min-width: 0; }
+.small { font-size: .75em; }
+.center { text-align: center; }
+
+/* Override the default theme's vertically centered flex layout. */
+section { display: block; }
+section ul { list-style: none; padding-left: 0; }
+section ul > li { position: relative; padding-left: 48px; margin: 0 0 20px; }
+section ul > li::before { content: ''; position: absolute; left: 2px; top: calc((1.45em - .6em) / 2); width: .6em; height: .6em; border-radius: 50%; background: var(--accent); }
+section ul ul { margin: 5px 0 0; }
+section ul ul > li { margin-bottom: 0; padding-left: 36px; }
+section ul ul > li::before { width: .6em; height: .6em; left: 0; background: var(--ink); }
+section table { width: 78%; margin: 48px auto 0; }
+section tbody td:first-child { background: var(--accent); color: white; }
+section.title .cover-title > p:has(img) { margin: 0; flex: none; line-height: 0; }
+section.title .cover-title > h1 { flex: 1; }
+section.section-title { display: flex; flex-direction: column; justify-content: center; }
+/* The upstream theme also sets place-content; modern browsers apply
+   align-content to block layout, so it must be reset independently. */
+section { align-content: start; }
+section.section-title { align-content: normal; }
+
+
+/* Compact cover: heading, author paragraph, social-links paragraph. */
+section.title.simple > h1 {
+  position: absolute;
+  left: 4.3%; right: 5%; bottom: 27%;
+  min-height: 100px;
+  display: flex; align-items: baseline; gap: 14px;
+  transform: none; margin: 0; padding-bottom: 17px; font-size: 48px;
+}
+section.title.simple > h1 .nf {
+  width: 100px; height: 100px; flex: none;
+  font-family: "Hack Nerd Font", "Hack Nerd Font Mono", "Hack Nerd Font Propo";
+  font-weight: normal; line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 116px; color: #222; transform: translateX(-12px) translateY(var(--icon-offset-y, 0px));
+}
+section.title.simple > p {
+  position: absolute; left: 7.3%; margin: 0;
+  font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 32px;
+}
+section.title.simple > p:first-of-type {
+  top: 73.3%; left: 0; right: 0; padding: 18px 7.3% 0;
+  border-top: 1px solid #999; display: flex; align-items: center; gap: 18px;
+}
+section.title.simple > p:first-of-type img {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+}
+section.title.simple > p:last-of-type {
+  top: calc(73.3% + 89px); display: flex; align-items: center; gap: 28px;
+}
+section.title.simple > p:last-of-type a {
+  display: inline-flex; align-items: center; gap: 12px;
+  color: inherit; text-decoration: none; line-height: 1;
+}
+/* Choose icons by destination, independent of link order. */
+section.title.simple > p:last-of-type a[href^="https://github.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://github.com" i]::before,
+section.title.simple > p:last-of-type a[href^="https://x.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://x.com" i]::before,
+section.title.simple > p:last-of-type a[href^="https://twitter.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://twitter.com" i]::before {
+  font-family: "Hack Nerd Font", "Hack Nerd Font Mono", "Hack Nerd Font Propo";
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; flex: none; font-size: 44px; font-weight: normal; color: #192e4c;
+}
+section.title.simple > p:last-of-type a[href^="https://github.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://github.com" i]::before { content: "\f09b"; }
+section.title.simple > p:last-of-type a[href^="https://x.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://x.com" i]::before,
+section.title.simple > p:last-of-type a[href^="https://twitter.com/" i]::before,
+section.title.simple > p:last-of-type a[href="https://twitter.com" i]::before { content: "𝕏"; font-family: "STIX Two Math", "Cambria Math", "DejaVu Sans", serif; font-size: 46px; transform: translateY(1px); }
+
+/* Opt-in fixed-size region for automatic text fitting. */
+section .fit { height: 420px; overflow: hidden; }
+section .fit > * { margin: 0; }
+section .fit ul > li { margin-bottom: .65em; padding-left: 1.6em; }
+section .fit ul ul > li { margin-bottom: 0; padding-left: 1.2em; }
